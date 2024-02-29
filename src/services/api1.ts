@@ -1,17 +1,7 @@
 /* eslint-disable no-useless-catch */
-import axios, {
-  AxiosInstance,
-  AxiosResponse,
-  AxiosRequestConfig,
-  AxiosRequestHeaders,
-  AxiosProgressEvent,
-} from "axios";
+import axios, { AxiosInstance, AxiosResponse, AxiosProgressEvent } from "axios";
 import { redirect } from "react-router-dom";
 import { BACKEND_URL } from "../configraion";
-
-interface AdaptAxiosRequestConfig extends AxiosRequestConfig {
-  headers: AxiosRequestHeaders;
-}
 
 const BaseUrl = BACKEND_URL + "/api/v1";
 
