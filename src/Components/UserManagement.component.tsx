@@ -119,6 +119,14 @@ const UserManagementComponent: React.FC = () => {
         console.log("User deleted successfully");
         // Update user list
         setUsers(users.filter((user) => user.id !== userId));
+        axios
+          .get(`/api/users`)
+          .then((response) => {
+            setUsers(response.data.users);
+          })
+          .catch((error) => {
+            console.error("Error fetching users:", error);
+          });
       })
       .catch((error) => {
         console.error("Error deleting user:", error);
